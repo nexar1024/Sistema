@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(29, 214, 214);
+}
+
+.form-ingresar{
+    width: 400px;
+    background: #CCFFFF;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: black;
+}
+
+h1{
+    width: 265px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
+h2{
+    padding: 5%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.controls{
+    width: 100%;
+    background: #CCFFFF;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.form-ingresar .botons{
+    width: 100%;
+    background: #6ce28f;
+    border: none;
+    padding: 12px;
+    color: #000;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+header {
+    background: black;
+    width: 100%;
+    clear: both;
+    content:'';
+    display: table;
+  }
+
+.menuSis{
+    width: 1200px;
+    margin: 5px auto;
+    background: #000;
+}
+
+.menuSis ul{
+    list-style: none;
+}
+
+.menu > li{
+    display: inline-block;
+}
+
+.menu > li >a{
+    display: block;
+    padding: 10px 10px;
+    color: #fff;
+    font-family: 'Open sans';
+    text-decoration: none;
+}
+
+.menu li a:hover{
+    color: #CE7D35;
+    transition: all .3s;
+}
+
+.submenu{
+    position: absolute;
+    background: #333333;
+    width: 500%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.submenu li a{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    font-family: 'Open sans';
+    text-decoration: none;
+}
+
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+
+nav {
+    float: right;
+  }
+  
+nav ul li {
+    list-style: none;
+    margin-left: 75px;
+    padding: 12px 0;
+    float: left;
+    position: relative;
+}
+  
+nav ul li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+}
+  
+nav ul li a::before {
+    display: block;
+    content: '';
+    width: 0%;
+    background: #444;
+    height: 5px;
+    top:0;
+    position: absolute;
+    transition: width 0.2s;
+}
+  
+nav ul li a:hover::before {
+    width: 100%;
+}
+
