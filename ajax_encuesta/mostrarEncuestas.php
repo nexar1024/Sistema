@@ -26,8 +26,8 @@ while ($row = $resultado->fetch_assoc()) {
         <tbody>
             <tr>
                 <td>' . $row["id_encuesta"] . '</td>
-                <td><a href="mostrarpreguntas.php?id_encuesta=' . $row['id_encuesta'] . '">' . $row['titulo'] . '</a></td>
-                <td width="100">' . mb_strimwidth($row["descripcion"], 0, 30, "...") . '</td>
+                <td>' . $row['titulo'] . '</td>
+                <td>' . $row['descripcion'] . '</td>
                 <td>' . $row["estado"] . '</td>
                 <td>' . $row["fecha_inicio"] . '</td>
                 <td>' . $row["fecha_final"] . '</td>
