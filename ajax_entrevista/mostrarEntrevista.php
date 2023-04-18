@@ -28,7 +28,7 @@ while ($row = $resultado->fetch_assoc()) {
             <tr>
                 <td>' . $row["id_entrevista"] . '</td>
                 <td><a href="mostrarpreguntasentrevistas.php?id_entrevista=' . $row['id_entrevista'] . '">' . $row['tituloE'] . ' </a></td>
-                <td width="100">' . mb_strimwidth($row["objetivo"], 0, 30, "...") . '</td>
+                <td width="100">' . $row["objetivo"] . '</td>
                 <td>' . $row["nombre_entrevistado"] . '</td>
                 <td>' . $row["estado"] . '</td>
                 <td>' . $row["fecha_inicio"] . '</td>
