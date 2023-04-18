@@ -21,15 +21,16 @@ $data = '
 $query = "SELECT * FROM encuestas ORDER BY id_encuesta DESC";
 $resultado = $con->query($query);
 
-/*while ($row = $resultado->fetch_assoc()) {
+while ($row = $resultado->fetch_assoc()) {
     $data .= '
         <tbody>
             <tr>
-                <td>' . $row["id_usuario"] . '</td>
-                <td>' . $row['nombres'] . '</td>
-                <td>' . $row["apellidos"]. '</td>
-                <td>' . $row["email"] . '</td>
-                <td>' . $row["clave"] . '</td>
+                <td>' . $row["id_encuesta"] . '</td>
+                <td><a href="mostrarpreguntas.php?id_encuesta=' . $row['id_encuesta'] . '">' . $row['titulo'] . '</a></td>
+                <td width="100">' . mb_strimwidth($row["descripcion"], 0, 30, "...") . '</td>
+                <td>' . $row["estado"] . '</td>
+                <td>' . $row["fecha_inicio"] . '</td>
+                <td>' . $row["fecha_final"] . '</td>
                 <td>
                     <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Accciones
@@ -44,6 +45,6 @@ $resultado = $con->query($query);
 }
 
 
-$data .= '</table>';*/
+$data .= '</table>';
 
 echo $data;
