@@ -36,8 +36,13 @@ while ($row = $resultado->fetch_assoc()) {
                       Accciones
                     </button>
                     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <button onclick="obtenerDetallesUsuario(' . $row['id_usuario'] . ')" class="dropdown-item btn btn-warning">Modificar</button>
-                        <button onclick="eliminarUsuario(' . $row['id_usuario'] . ')" class="dropdown-item btn btn-danger">Eliminar</button>
+                        <button onclick="obtenerDetallesEncuesta(' . $row['id_encuesta'] . ')" class="dropdown-item btn btn-warning">Modificar</button>
+                        <button onclick="eliminarEncuesta(' . $row['id_encuesta'] . ')" class="dropdown-item btn btn-danger">Eliminar</button>
+                        <button onclick="publicarEncuesta(' . $row['id_encuesta'] . ')" class="dropdown-item btn btn-primary">Publicar</button>
+                        <button onclick="finalizarEncuesta(' . $row['id_encuesta'] . ')" class="dropdown-item btn btn-secondary">Finalizar</button>
+
+                        <a class="dropdown-item btn btn-secondary" href="vistaprevia.php?id_encuesta=' . $row['id_encuesta'] . '">Vista Previa</a>
+                        <a class="dropdown-item btn btn-secondary" href="resultados.php?id_encuesta=' . $row['id_encuesta'] . '">Resultados</a>
                     </div>
                 </td>
             </tr>
