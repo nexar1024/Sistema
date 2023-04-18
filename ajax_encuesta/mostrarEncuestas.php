@@ -8,19 +8,20 @@ $data = '
     <table class="table table-bordered table-hover table-condensed">
         <thead class="thead-dark">
             <tr>
-                <th>ID usuario</th>
-                <th>Nombres</th>
-                <th>Apellidos</th>
-                <th>Email</th>
-                <th>Clave</th>
+                <th>ID encuesta</th>
+                <th>Título</th>
+                <th width="100">Descripción</th>
+                <th>Estado</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Final</th>
                 <th>Accciones</th>
             </tr>
         </thead>';
 
-$query = "SELECT * FROM usuarios ORDER BY id_usuario DESC";
+$query = "SELECT * FROM encuestas ORDER BY id_encuesta DESC";
 $resultado = $con->query($query);
 
-while ($row = $resultado->fetch_assoc()) {
+/*while ($row = $resultado->fetch_assoc()) {
     $data .= '
         <tbody>
             <tr>
@@ -43,6 +44,6 @@ while ($row = $resultado->fetch_assoc()) {
 }
 
 
-$data .= '</table>';
+$data .= '</table>';*/
 
 echo $data;
