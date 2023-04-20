@@ -29,7 +29,7 @@ while ($row = $resultado->fetch_assoc()) {
         <tbody>
             <tr>
                 <td>' . $row["id_pregunta"] . '</td>
-                <td><a href="mostraropcionesentrevista.php?id_pregunta=' . $row['id_pregunta'] . '">' . $row['titulo'] . '</a></td>
+                <td>' . $row['titulo'] . '</td>
                 <td>
                     <button onclick="obtenerDetallesPregunta(' . $row['id_pregunta'] . ')" class="btn btn-warning">Modificar</button>
                     <button onclick="eliminarPregunta(' . $row['id_pregunta'] . ')" class="btn btn-danger">Eliminar</button>
