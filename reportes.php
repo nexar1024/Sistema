@@ -187,7 +187,7 @@ $result = str_replace('"','',$result);
     -->
     
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlLBGzGuZLPn_zJgas6NcRv0jJLJNQt1o&callback=initMap&libraries=visualization&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-rbnMxufATlyLIILejVqxKo4MZo-6jRs&callback=initMap&libraries=visualization&v=weekly"
       defer
     ></script>
   </body>
