@@ -69,7 +69,7 @@
 
 
     <h2>Bienvenido Administrador</h2>
-    <center><img src="imagenes/principal-logo.png" width="350" height="350" ></center>
+    <center><img src="imagenes/principal-lg.png" width="500" height="450" ></center>
 
     <!--jQuery, Popper.js, Bootstrap JS-->
     <script src="jquery/jquery-3.3.1.min.js"></script>

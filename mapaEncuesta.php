@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    	<link rel="stylesheet" href="styles.css">
+    	<link rel="stylesheet" href="styless.css">
 
 		<link rel="stylesheet" href="datatables/datatables.min.css">
     	<link rel="stylesheet" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
