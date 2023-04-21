@@ -2,7 +2,10 @@
  if($_SERVER['REQUEST_METHOD']=='POST'){
   header('Content-Type: application/json; charset=utf-8');
 
-  echo json_encode("OKrecibido");
+  print_r($_FILES);
+
+
+ // echo json_encode("OKrecibido".  $_FILES);
 
   	/*include_once("config.php");
   	  	   date_default_timezone_set('America/Guayaquil');
