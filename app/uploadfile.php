@@ -1,7 +1,9 @@
 <?php
  if($_SERVER['REQUEST_METHOD']=='POST'){
   include_once("config.php");
-  header('Content-Type: application/json; charset=utf-8');
+
+  header("Content-Type: text/plain");
+
   date_default_timezone_set('America/Guayaquil');
   $originalImgName= date('dmYHis') ."-". $_FILES['filename']['name'];
   $tempName= $_FILES['filename']['tmp_name'];
@@ -20,14 +22,17 @@
            while ($row = mysqli_fetch_assoc($result)) {
                          $emparray[] = $row;
                        }
-                       echo json_encode(array( "status" => "true","message" => "Successfully file added!" , "data" => $emparray) );
+                       echo 'AUDIO GUARDADO CORRECTAMENTE';
+                      // echo json_encode(array( "status" => "true","message" => "Successfully file added!" , "data" => $emparray) );
                        
            }else{
-               echo json_encode(array( "status" => "false","message" => "Failed!") );
+            echo 'ERROR EN AUDIO';
+               //echo json_encode(array( "status" => "false","message" => "Failed!") );
            }
 
     }else{
-      echo json_encode(array( "status" => "false","message" => "Failed!") );
+      echo 'ERROR EN AUDIO';
+      //echo json_encode(array( "status" => "false","message" => "Failed!") );
     }
     
     
