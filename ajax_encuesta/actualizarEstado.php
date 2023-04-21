@@ -11,7 +11,7 @@
 	echo "<br/>";
 
 	$query = "SELECT * FROM encuestas";
-	$resultado = $con->query($query);
+	$resultado = $conn->query($query);
 	$tamaño = $resultado->num_rows;
 
 

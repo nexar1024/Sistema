@@ -8,8 +8,8 @@ if (isset($_POST['id_encuesta']) && isset($_POST['id_encuesta']) != "") {
 
     // Obtener detalles de la encuesta
     $query = "SELECT * FROM encuestas WHERE id_encuesta = '$id_encuesta'" ;
-    if (!$result = mysqli_query($con, $query)) {
-        exit(mysqli_error($con));
+    if (!$result = mysqli_query($conn, $query)) {
+        exit(mysqli_error($conn));
     }
     $response = array();
     if (mysqli_num_rows($result) > 0) {
