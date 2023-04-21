@@ -5,16 +5,12 @@ $password = "LWWiArhJ";
 $dbname = "sistema_geo_encent";
 $dbServerPort = "10024";
 
-// Creamos la conexión
-$con = new mysqli($servername, $username, $password, $dbname,$dbServerPort);
-mysqli_set_charset($con,"utf8");
+$conn=new mysqli($servername,$username,$password,$dbname,$dbServerPort);
 
-// Verificamos la conexión
-if ($con->connect_error) {
-    die("Conexión fallida: " . $con->connect_error);
-} else {
-	// echo "Conexión exitosa";
+if($conn->connect_error){
+	die("Connection Failed".$conn->connect_error);
+}else{
+	
 }
-
 
 ?>
