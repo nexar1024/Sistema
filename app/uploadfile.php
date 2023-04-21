@@ -1,7 +1,9 @@
 <?php
  if($_SERVER['REQUEST_METHOD']=='POST'){
   
-  	include_once("config.php");
+  echo json_encode("OKrecibido");
+
+  	/*include_once("config.php");
   	  	   date_default_timezone_set('America/Guayaquil');
         $originalImgName= date('dmYHis') ."-". $_FILES['filename']['name'];
         $tempName= $_FILES['filename']['tmp_name'];
@@ -31,6 +33,6 @@
         	
         }else{
         	echo json_encode(array( "status" => "false","message" => "Failed!") );
-        }
+        }*/
   }
 ?>
