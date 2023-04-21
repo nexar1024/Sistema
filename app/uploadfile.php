@@ -12,9 +12,26 @@
   
   if(move_uploaded_file($tempName,$folder.$originalImgName)){
     
-    $query = "INSERT INTO resultadosentrevista (id_entrevista,audio) VALUES (10,'".$url."')";
+ 
+    $UltimoId = 10;
+    $queryUltimoId = "SELECT id_entrevista FROM `entrevistas` order by id_entrevista desc";
+
+    $resultID= mysqli_query($con, $queryUltimoId);
+    if(mysqli_num_rows($resultID) > 0){  
+      while ($row = mysqli_fetch_assoc($resultID)) {
+        $UltimoId = $row['id_entrevista'];
+         }
+               
+      }
+
+
+    $query = "INSERT INTO resultadosentrevista (id_entrevista,audio) VALUES (".$UltimoId.",'".$url."')";
     if(mysqli_query($con,$query)){
     
+
+
+
+
        $query= "SELECT * FROM resultadosentrevista WHERE audio='".$url."'";
        $result= mysqli_query($con, $query);
        $emparray = array();
