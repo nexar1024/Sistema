@@ -1,8 +1,19 @@
 <?php
  if($_SERVER['REQUEST_METHOD']=='POST'){
   header('Content-Type: application/json; charset=utf-8');
+  date_default_timezone_set('America/Guayaquil');
+  $originalImgName= date('dmYHis') ."-". $_FILES['filename']['name'];
+  $tempName= $_FILES['filename']['tmp_name'];
+  $folder="uploadedFiles/";
+  $url = "/uploadedFiles/".$originalImgName; //update path as per your directory structure 
+  
+  if(move_uploaded_file($tempName,$folder.$originalImgName)){
+    echo json_encode("Subio" );
+  }else{
+    echo json_encode("Error en subida" );
+  }
 
-  print_r($_FILES);
+  //print_r($_FILES);
 
 
  // echo json_encode("OKrecibido".  $_FILES);
