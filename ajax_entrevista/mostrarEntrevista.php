@@ -19,10 +19,13 @@ $data = '
             </tr>
         </thead>';
 
-$query = "SELECT * FROM entrevistas ORDER BY id_entrevista DESC";
+$query = "SELECT * , (select audio from resultadosentrevista where resultadosentrevista.id_entrevista = entrevistas.id_entrevista order by resultadosentrevista.id_entrevista desc limit 1 ) as audio FROM entrevistas ORDER BY id_entrevista DESC";
 $resultado = $con->query($query);
 
 while ($row = $resultado->fetch_assoc()) {
+
+
+
     $data .= '
         <tbody>
             <tr>
@@ -42,11 +45,21 @@ while ($row = $resultado->fetch_assoc()) {
                         <button onclick="eliminarEntrevista(' . $row['id_entrevista'] . ')" class="dropdown-item btn btn-danger">Eliminar</button>
                         <button onclick="publicarEntrevista(' . $row['id_entrevista'] . ')" class="dropdown-item btn btn-primary">Publicar</button>
                         <button onclick="finalizarEntrevista(' . $row['id_entrevista'] . ')" class="dropdown-item btn btn-secondary">Finalizar</button>
-
+                       
+                        <a class="dropdown-item btn btn-secondary" href="audiosEntrevista.php?id_entrevista=' . $row['id_entrevista'] . '">Audios</a>
                         <a class="dropdown-item btn btn-secondary" href="vistapreviaEntrevista.php?id_entrevista=' . $row['id_entrevista'] . '">Vista Previa</a>
                     </div>
                 </td>
             </tr>
+            <tr>
+
+            <td colspan="7">
+            <h5>Audio Relacionado:</h5>
+             <a href="'.$row['audio'].'" /> Nombre de audio: '.$row['audio'].' </a>
+            </td>
+
+            </tr>
+
         </tbody>';
 }
 
