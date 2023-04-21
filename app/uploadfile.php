@@ -1,6 +1,7 @@
 <?php
  if($_SERVER['REQUEST_METHOD']=='POST'){
-  
+  header('Content-Type: application/json; charset=utf-8');
+
   echo json_encode("OKrecibido");
 
   	/*include_once("config.php");
