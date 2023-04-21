@@ -46,7 +46,7 @@ while ($row = $resultado->fetch_assoc()) {
                         <button onclick="publicarEntrevista(' . $row['id_entrevista'] . ')" class="dropdown-item btn btn-primary">Publicar</button>
                         <button onclick="finalizarEntrevista(' . $row['id_entrevista'] . ')" class="dropdown-item btn btn-secondary">Finalizar</button>
                        
-                        <a class="dropdown-item btn btn-secondary" href="audiosEntrevista.php?id_entrevista=' . $row['id_entrevista'] . '">Audios</a>
+        
                         <a class="dropdown-item btn btn-secondary" href="vistapreviaEntrevista.php?id_entrevista=' . $row['id_entrevista'] . '">Vista Previa</a>
                     </div>
                 </td>

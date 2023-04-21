@@ -62,7 +62,7 @@ $result = str_replace('"','',$result);
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     
      
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
       <span class="navbar-toggler-icon"></span>
     </button>
     
@@ -95,11 +95,9 @@ $result = str_replace('"','',$result);
             </ul>	
 		</nav>
 	</header>
-
-
     <h2>Mapa de calor de las Encuestas</h2> 
     <br>
-
+   
     <div id="floating-panel">
       <button id="toggle-heatmap">Heatmap</button>
       <button id="change-gradient">Gradiente</button>
