@@ -90,7 +90,7 @@
   	<?php
 
   	$consulta = "SELECT * FROM preguntas WHERE id_encuesta = '$id_encuesta'";
-	$resultados2 = $con->query($consulta);
+	$resultados2 = $conn->query($consulta);
 
 	 ?>
 
@@ -107,7 +107,7 @@
 		$id_pregunta = $row2['id_pregunta'];
 
 		$query = "SELECT preguntas.id_pregunta, preguntas.titulo,COUNT('preguntas.titulo') as count, opciones.valor FROM opciones INNER JOIN preguntas ON opciones.id_pregunta=preguntas.id_pregunta INNER JOIN resultados ON opciones.id_opcion=resultados.id_opcion WHERE preguntas.id_pregunta = '$id_pregunta' GROUP BY opciones.valor ORDER BY preguntas.id_pregunta";
-		$resultados = $con->query($query);
+		$resultados = $conn->query($query);
 
 				/*TITULO*/
 		echo "<h3>" . $row2['titulo'] . "</h3>";
