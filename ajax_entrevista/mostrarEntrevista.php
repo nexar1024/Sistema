@@ -55,7 +55,9 @@ while ($row = $resultado->fetch_assoc()) {
 
             <td colspan="7">
             <h5>Audio Relacionado:</h5>
-             <a href="'.$row['audio'].'" /> Nombre de audio: '.$row['audio'].' </a>
+
+            -> Ruta de Grabacion en nube: '.$row['audio'].'   <a href="'.$row['audio'].'"  download> DESCARGAR </a>
+            
             </td>
 
             </tr>
