@@ -8,8 +8,8 @@ if (isset($_POST['id_opcion']) && isset($_POST['id_opcion']) != "") {
 
     // Obtener detalles de la pregunta
     $query = "SELECT * FROM opciones WHERE id_opcion = '$id_opcion'" ;
-    if (!$result = mysqli_query($con, $query)) {
-        exit(mysqli_error($con));
+    if (!$result = mysqli_query($conn, $query)) {
+        exit(mysqli_error($conn));
     }
     $response = array();
     if (mysqli_num_rows($result) > 0) {

@@ -19,7 +19,7 @@ if (isset($_POST)) {
         clave = '$clave' 
         WHERE id_usuario   = '$id_usuario'
     ";
-    if (!$result = mysqli_query($con, $query)) {
-        exit(mysqli_error($con));
+    if (!$result = mysqli_query($conn, $query)) {
+        exit(mysqli_error($conn));
     }
 }

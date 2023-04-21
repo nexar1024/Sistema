@@ -11,6 +11,6 @@ if (isset($_POST['id_entrevista']) && isset($_POST['titulo'])) {
     $query = "INSERT INTO preguntasEntrevista (id_entrevista, titulo)
               VALUES ('$id_entrevista', '$titulo')";
 
-    $resultado = $con->query($query);
+    $resultado = $conn->query($query);
 
 }

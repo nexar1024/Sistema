@@ -21,7 +21,7 @@ $data = '
 
 $query = "SELECT * FROM opciones WHERE id_pregunta = '$id_pregunta'";
 
-$resultado = $con->query($query);
+$resultado = $conn->query($query);
 
 while ($row = $resultado->fetch_assoc()) {
     $data .= '

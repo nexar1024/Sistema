@@ -9,6 +9,6 @@ if (isset($_POST['id_entrevista']) && isset($_POST['id_entrevista']) != "") {
 
     // Eliminar encuesta
     $query = "UPDATE entrevistas SET estado = '0' WHERE id_entrevista = '$id_entrevista'";
-    $resultado = $con->query($query);
+    $resultado = $conn->query($query);
 
 }

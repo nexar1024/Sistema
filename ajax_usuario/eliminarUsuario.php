@@ -9,5 +9,5 @@ if (isset($_POST['id_usuario']) && isset($_POST['id_usuario']) != "") {
 
     // Eliminar usuario
     $query = "DELETE FROM usuarios WHERE id_usuario = '$id_usuario'";
-    $resultado = $con->query($query);
+    $resultado = $conn->query($query);
 }

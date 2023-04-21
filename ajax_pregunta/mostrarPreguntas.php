@@ -25,7 +25,7 @@ $query = "SELECT preguntas.id_pregunta, preguntas.id_encuesta, preguntas.titulo,
             ON preguntas.id_tipo_pregunta = tipo_pregunta.id_tipo_pregunta
             WHERE preguntas.id_encuesta = '$id_encuesta'";
 
-$resultado = $con->query($query);
+$resultado = $conn->query($query);
 
 while ($row = $resultado->fetch_assoc()) {
     $data .= '

@@ -9,5 +9,5 @@ if (isset($_POST['id_opcion']) && isset($_POST['id_opcion']) != "") {
 
     // Eliminar encuesta
     $query = "DELETE FROM opciones WHERE id_opcion = '$id_opcion'";
-    $resultado = $con->query($query);
+    $resultado = $conn->query($query);
 }

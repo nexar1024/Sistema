@@ -22,7 +22,7 @@ $query = "SELECT preguntasentrevista.id_pregunta, preguntasentrevista.id_entrevi
             FROM preguntasentrevista
             WHERE preguntasentrevista.id_entrevista = '$id_entrevista'";
 
-$resultado = $con->query($query);
+$resultado = $conn->query($query);
 
 while ($row = $resultado->fetch_assoc()) {
     $data .= '

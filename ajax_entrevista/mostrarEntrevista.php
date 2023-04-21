@@ -20,7 +20,7 @@ $data = '
         </thead>';
 
 $query = "SELECT * , (select audio from resultadosentrevista where resultadosentrevista.id_entrevista = entrevistas.id_entrevista order by resultadosentrevista.id_entrevista desc limit 1 ) as audio FROM entrevistas ORDER BY id_entrevista DESC";
-$resultado = $con->query($query);
+$resultado = $conn->query($query);
 
 while ($row = $resultado->fetch_assoc()) {
 

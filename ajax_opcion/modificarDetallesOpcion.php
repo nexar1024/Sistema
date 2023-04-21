@@ -13,7 +13,7 @@ if (isset($_POST)) {
         valor  = '$valor'
         WHERE id_opcion   = '$id_opcion'
     ";
-    if (!$result = mysqli_query($con, $query)) {
-        exit(mysqli_error($con));
+    if (!$result = mysqli_query($conn, $query)) {
+        exit(mysqli_error($conn));
     }
 }

@@ -19,6 +19,6 @@ if (isset($_POST['id_usuario']) && isset($_POST['tituloE']) && isset($_POST['obj
     $query = "INSERT INTO entrevistas (id_usuario, tituloE, objetivo, nombre_entrevistado, estado, fecha_inicio, fecha_final)
               VALUES ('$id_usuario', '$tituloE', '$objetivo','$nombre_entrevistado', '0', '$fecha_inicio', '$fecha_final')";
 
-    $resultado = $con->query($query);
+    $resultado = $conn->query($query);
 
 }

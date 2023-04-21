@@ -8,8 +8,8 @@ if (isset($_POST['id_usuario']) && isset($_POST['id_usuario']) != "") {
 
     // Obtener detalles del usuario
     $query = "SELECT * FROM usuarios WHERE id_usuario = '$id_usuario'" ;
-    if (!$result = mysqli_query($con, $query)) {
-        exit(mysqli_error($con));
+    if (!$result = mysqli_query($conn, $query)) {
+        exit(mysqli_error($conn));
     }
     $response = array();
     if (mysqli_num_rows($result) > 0) {

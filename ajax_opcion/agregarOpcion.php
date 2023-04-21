@@ -11,6 +11,6 @@ if (isset($_POST['id_pregunta']) && isset($_POST['valor'])) {
     $query = "INSERT INTO opciones (id_pregunta, valor)
               VALUES ('$id_pregunta', '$valor')";
 
-    $resultado = $con->query($query);
+    $resultado = $conn->query($query);
 
 }

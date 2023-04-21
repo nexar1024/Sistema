@@ -14,6 +14,6 @@ if (isset($_POST['id_usuario']) && isset($_POST['nombres']) && isset($_POST['ape
     $query = "INSERT INTO usuarios (nombres, apellidos, email, clave, id_tipo_usuario)
               VALUES ('$nombres', '$apellidos', '$email', '$clave','2')";
 
-    $resultado = $con->query($query);
+    $resultado = $conn->query($query);
 
 }

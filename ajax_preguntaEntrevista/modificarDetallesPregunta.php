@@ -14,7 +14,7 @@ if (isset($_POST)) {
         WHERE id_pregunta   = '$id_pregunta'
     ";
 
-    if (!$result = mysqli_query($con, $query)) {
-        exit(mysqli_error($con));
+    if (!$result = mysqli_query($conn, $query)) {
+        exit(mysqli_error($conn));
     }
 }

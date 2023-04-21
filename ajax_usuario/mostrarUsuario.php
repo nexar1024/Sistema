@@ -18,7 +18,7 @@ $data = '
         </thead>';
 
 $query = "SELECT * FROM usuarios ORDER BY id_usuario DESC";
-$resultado = $con->query($query);
+$resultado = $conn->query($query);
 
 while ($row = $resultado->fetch_assoc()) {
     $data .= '
