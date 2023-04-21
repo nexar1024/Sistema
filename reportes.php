@@ -6,7 +6,7 @@ include("bd/conexion.php");
 $arrLatLng = array();
 $result = '';
 
-$sql = "SELECT latitud,longitud from usuarios_entrevistas";
+$sql = "SELECT latitud,longitud from usuarios_encuestas";
 $result = $conn->query($sql);
 while ( $row = $result->fetch_array(MYSQLI_ASSOC) ) {
   //$arrLat[] = $row["latitud"];
@@ -95,7 +95,7 @@ $result = str_replace('"','',$result);
             </ul>	
 		</nav>
 	</header>
-    <h2>Mapa de calor de las Entrevistas</h2> 
+    <h2>Mapa de calor de las Encuestas</h2> 
     <br>
    
     <div id="floating-panel">
