@@ -11,7 +11,7 @@ include("bd/conexion.php");
 $query = "SELECT * FROM usuarios WHERE email = '$email' AND clave = '$clave'";
 	
 
-	$resultado = $con->query($query);
+	$resultado = $conn->query($query);
 
 	
 	if ($row = $resultado->fetch_assoc()) {
