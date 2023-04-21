@@ -5,7 +5,7 @@
 
 	/* Consulta para extraer título y descripción de la encuesta*/
 	$query3 = "SELECT * FROM encuestas WHERE id_encuesta = '$id_encuesta'";
-	$resultados3 = $con->query($query3);
+	$resultados3 = $conn->query($query3);
 	$row3 = $resultados3->fetch_assoc();
 
  ?>

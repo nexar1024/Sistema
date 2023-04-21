@@ -4,14 +4,14 @@
 
   	$id_entrevista = $_GET['id_entrevista'];
  	$query2 = "SELECT * FROM preguntasentrevista WHERE id_entrevista = '$id_entrevista'";
-  	$respuesta2 = $con->query($query2);
+  	$respuesta2 = $conn->query($query2);
 
   	$query3 = "SELECT entrevistas.tituloE, entrevistas.objetivo, preguntasentrevista.id_pregunta, preguntasentrevista.id_entrevista 
 		FROM preguntasentrevista
 		INNER JOIN entrevistas
 		ON preguntasentrevista.id_entrevista = entrevistas.id_entrevista
 		WHERE preguntasentrevista.id_entrevista = '$id_entrevista'";
-	$respuesta3 = $con->query($query3);
+	$respuesta3 = $conn->query($query3);
 	$row3 = $respuesta3->fetch_assoc();
 
 

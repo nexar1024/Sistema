@@ -5,12 +5,12 @@
   $id_encuesta = $_GET['id_encuesta'];
 
   $query = "SELECT * FROM encuestas WHERE id_encuesta = '$id_encuesta'";
-  $respuesta = $con->query($query);
+  $respuesta = $conn->query($query);
   $row = $respuesta->fetch_assoc();
 
 
   $query3 = "SELECT * FROM tipo_pregunta";
-  $respuesta3 = $con->query($query3);
+  $respuesta3 = $conn->query($query3);
 
  ?>
 

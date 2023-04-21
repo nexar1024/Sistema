@@ -5,7 +5,7 @@ include("bd/conexion.php") ;
 $id_pregunta = $_GET['id_pregunta'];
 
 $query = "SELECT * FROM preguntas WHERE id_pregunta = '$id_pregunta'";
-$respuesta = $con->query($query);
+$respuesta = $conn->query($query);
 $row = $respuesta->fetch_assoc();
 
 

@@ -7,7 +7,7 @@ $arrLatLng = array();
 $result = '';
 
 $sql = "SELECT latitud,longitud from usuarios_entrevistas";
-$result = $con->query($sql);
+$result = $conn->query($sql);
 while ( $row = $result->fetch_array(MYSQLI_ASSOC) ) {
   //$arrLat[] = $row["latitud"];
   //$arrLng[] = $row["longitud"];
