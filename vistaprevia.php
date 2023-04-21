@@ -114,7 +114,7 @@
                 WHERE preguntas.id_pregunta = $id
 				ORDER BY opciones.id_pregunta, opciones.id_opcion";
 
-			$respuesta = $con->query($query);
+			$respuesta = $conn->query($query);
 
 		 ?>
 		 	<div class="container col-md-12">
