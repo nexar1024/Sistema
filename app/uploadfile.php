@@ -8,7 +8,9 @@
   $url = "/uploadedFiles/".$originalImgName; //update path as per your directory structure 
   
   if(move_uploaded_file($tempName,$folder.$originalImgName)){
-    echo json_encode("Subio" );
+    echo json_encode("Subio".$url );
+
+
   }else{
     echo json_encode("Error en subida" );
   }
